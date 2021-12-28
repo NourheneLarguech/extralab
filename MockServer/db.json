@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "John",
+      "creationDate": "2021-12-27T23:48:40.523Z",
+      "postContent": "Le RiverLab est un nouvel instrument permettant de surveiller automatiquement et en continu la chimie des eaux naturelles telles que les rivières. Un réseau de trois stations a été déployé en France (Ile de France, Bretagne et Alsace). Le premier prototype de RiverLab a été déployé en 2014 et 2016.",
+      "tags": [
+        "Intervention"
+      ]
+    },
+    {
+      "id": 2,
+      "author": "Smith",
+      "creationDate": "2021-12-27T23:49:28.739Z",
+      "postContent": "Si vous avez besoin d'un laboratoire pendant un certain temps ou pour effectuer des analyses dans différents endroits, il vous suffit de louer un Rivertruck sur mesure pour la durée nécessaire à votre travail.",
+      "tags": [
+        "Signalement"
+      ]
+    },
+    {
+      "id": 3,
+      "author": "Nourhene",
+      "creationDate": "2021-12-27T23:50:01.622Z",
+      "postContent": "Découvrez un véritable laboratoire avec tout l'équipement nécessaire, extensible et sur mesure, pour vous permettre de réaliser vos travaux en toute sérénité !",
+      "tags": [
+        "Intervention",
+        "Signalement"
+      ]
+    }
+  ]
+}
