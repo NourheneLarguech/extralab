@@ -52,11 +52,10 @@ const PostForm: React.FunctionComponent<PostFormProps> = ({
   };
 
   const handleSubmit = () => {
-    
-    if (formText.length===0) {
-      console.log("Please fill the text field")
-      setOpenAlert(true)
-      return
+    if (formText.length === 0) {
+      console.log("Please fill the text field");
+      setOpenAlert(true);
+      return;
     }
     if (data) {
       // si les données sont passés en props le formulaire execute une requette UPDATE
@@ -79,8 +78,7 @@ const PostForm: React.FunctionComponent<PostFormProps> = ({
     } else {
       // if NO data is parsed the component will add new post
 
-      const data: postDataType = {
-        id:0,
+      const data: Omit<postDataType, "id"> = {
         author: user,
         creationDate: new Date(),
         postContent: formText,
@@ -118,7 +116,7 @@ const PostForm: React.FunctionComponent<PostFormProps> = ({
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isopen]);
-  
+
   return (
     <Modal open={isopen} onClose={handleClose}>
       <Card
@@ -160,25 +158,25 @@ const PostForm: React.FunctionComponent<PostFormProps> = ({
             onChange={(event) => setFormText(event.target.value)}
           />
           <Collapse in={openAlert}>
-          <Alert
-          severity="error"
-            action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpenAlert(false);
-              }}
+            <Alert
+              severity="error"
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setOpenAlert(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+              sx={{ mb: 2 }}
             >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-          }
-          sx={{ mb: 2 }}
-        >
-          svp remplir le champ de text!!!
-        </Alert>
-        </Collapse>
+              svp remplir le champ de text!!!
+            </Alert>
+          </Collapse>
           <div>
             <Button
               onClick={() => handleTags("Signalement")}

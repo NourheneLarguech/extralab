@@ -9,7 +9,7 @@ const BASE_URL = "http://localhost:8000";
 // Service pour ajouter une nouvelle poste
 // Omit elimine un element de l'interface / type
 export const submitPostData = async (
-  post: postDataType
+  post: Omit<postDataType,"id">
 ): Promise<boolean> => {
   const requestOptions = {
     method: "POST",
